@@ -191,7 +191,3 @@ header .nav-btn {
   }
 }
 
-.loading {
-  transform: translateY(-100%);
-  transition: 0.3s ease;
-}
