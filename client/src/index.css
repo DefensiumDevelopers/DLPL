@@ -86,7 +86,7 @@ header {
 
 .nav-logo:hover img {
   /* filter: grayscale(100%) brightness(0.5); */
-  animation: rotateLogo 0.8s cubic-bezier(0,0,0,1);
+  animation: rotateLogo 0.8s cubic-bezier(0, 0, 0, 1);
 }
 
 .nav-logo:hover h2 {
@@ -101,7 +101,7 @@ nav a {
   padding: 2px;
 }
 
-nav a:hover{
+nav a:hover {
   background: rgb(29 78 216);
   color: white;
   border-radius: 15px;
@@ -185,4 +185,13 @@ header .nav-btn {
   footer {
     font-size: 11px;
   }
+  footer .footer-content {
+    place-items: baseline;
+    padding-left: 2rem;
+  }
+}
+
+.loading {
+  transform: translateY(-100%);
+  transition: 0.3s ease;
 }

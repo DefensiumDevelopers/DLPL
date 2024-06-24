@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { MdEmail } from "react-icons/md";
 import { IoCall } from "react-icons/io5";
@@ -14,8 +15,8 @@ const Footer = () => {
   const footer_icon =
     "cursor-pointer text-2xl hover:bg-white hover:text-blue-600 hover:p-[2px] hover:rounded-md duration-200";
   return (
-    <footer className="w-full bg-blue-600 text-white pt-10 pb-3 px-4  mt-auto">
-      <div className="max-w-7xl mx-auto grid justify-items-center grid-cols-1 md:grid-cols-4 gap-8 pb-2">
+    <footer className="w-full bg-blue-600 text-white pt-10 pb-3 mt-auto">
+      <div className="max-w-7xl mx-auto grid justify-items-center grid-cols-1 md:grid-cols-4 gap-8 pb-2 footer-content">
         <div>
           <h3 className="text-lg font-bold mb-4">
             Defensium Labs Privated Limited
@@ -68,7 +69,7 @@ const Footer = () => {
           <ul className="space-y-2">
             <li>
               <a href="#" className={footer_link}>
-                Penetration Tasting
+                Penetration Testing
               </a>
             </li>
             <li>
