@@ -2,8 +2,6 @@ import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
-import { Scrollbars } from "react-custom-scrollbars";
-
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
@@ -28,45 +26,43 @@ function App() {
 
   return (
     <div className="relative w-full h-screen">
-      <Scrollbars style={{ width: "100%", height: "100%" }}>
-        <AnimatePresence>
-          {isLoading && (
-            <motion.div
-              key="loader"
-              className="absolute inset-0 flex justify-center items-center bg-white"
-              initial={{ opacity: 1 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <Loader />
-            </motion.div>
-          )}
-        </AnimatePresence>
-        {!isLoading && (
-          <motion.main
-            key="content"
-            className="w-full flex flex-col bg-slate-300/20"
-            initial={{ opacity: 0 }}
+      <AnimatePresence>
+        {isLoading && (
+          <motion.div
+            key="loader"
+            className="absolute inset-0 flex justify-center items-center bg-white"
+            initial={{ opacity: 1 }}
             animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
-            s
           >
-            <Router>
-              <Navbar />
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/pricing" element={<Pricing />} />
-                <Route path="/blogs" element={<Blogs />} />
-                <Route path="/about" element={<AboutUs />} />
-                <Route path="/contact" element={<ContactUs />} />
-              </Routes>
-              <Footer />
-            </Router>
-          </motion.main>
+            <Loader />
+          </motion.div>
         )}
-      </Scrollbars>
+      </AnimatePresence>
+      {!isLoading && (
+        <motion.main
+          key="content"
+          className="w-full flex flex-col bg-slate-300/20"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          s
+        >
+          <Router>
+            <Navbar />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/pricing" element={<Pricing />} />
+              <Route path="/blogs" element={<Blogs />} />
+              <Route path="/about" element={<AboutUs />} />
+              <Route path="/contact" element={<ContactUs />} />
+            </Routes>
+            <Footer />
+          </Router>
+        </motion.main>
+      )}
     </div>
   );
 }
