@@ -19,6 +19,7 @@ const Loader = () => {
     <div className="w-full h-full flex justify-center items-center">
       <motion.div
         variants={loaderVariants}
+        exit={{ opacity: 0, y: -100 }}
         animate="animationOne"
         className="flex justify-center items-center"
       >

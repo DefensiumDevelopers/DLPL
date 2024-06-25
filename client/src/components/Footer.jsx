@@ -69,7 +69,7 @@ const Footer = () => {
           <ul className="space-y-2">
             <li>
               <a href="#" className={footer_link}>
-                Penetration Testing
+                Penetration Tsting
               </a>
             </li>
             <li>

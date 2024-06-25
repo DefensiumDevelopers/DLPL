@@ -16,7 +16,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="flex justify-between items-center sm:px-16 px-8 py-2 mx-auto fixed top-0 left-0 right-0 backdrop-blur-[20px]">
+    <header className=" h-[88px] flex justify-between items-center sm:px-16 px-8 py-2 mx-auto fixed top-0 left-0 right-0 backdrop-blur-[20px] z-[9999]">
       <Link to="/" className="nav-logo">
         <img
           src={LogoImg}
