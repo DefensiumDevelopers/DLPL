@@ -15,7 +15,7 @@ const Footer = () => {
   const footer_icon =
     "cursor-pointer text-2xl hover:bg-white hover:text-blue-600 hover:p-[2px] hover:rounded-md duration-200";
   return (
-    <footer className="w-full bg-blue-600 text-white pt-10 pb-3 mt-auto">
+    <footer className="w-full bg-blue-600 text-white pt-10 pb-3 mt-auto z-10">
       <div className="max-w-7xl mx-auto grid justify-items-center grid-cols-1 md:grid-cols-4 gap-8 pb-2 footer-content">
         <div>
           <h3 className="text-lg font-bold mb-4">

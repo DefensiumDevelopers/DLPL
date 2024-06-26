@@ -16,7 +16,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className=" h-[88px] flex justify-between items-center sm:px-16 px-8 py-2 mx-auto fixed top-0 left-0 right-0 backdrop-blur-[20px] z-[9999]">
+    <header className=" w-full h-[88px] bg-slate-100 top-0 flex justify-between items-center sm:px-16 px-8 py-2 mx-auto sticky left-0 right-0 backdrop-blur-[20px] z-20 ">
       <Link to="/" className="nav-logo">
         <img
           src={LogoImg}
@@ -35,11 +35,8 @@ const Navbar = () => {
       >
         <FaBars />
       </button>
-      <nav
-        ref={navRef}
-        className="flex text-lg gap-[10rem] font-medium md-device"
-      >
-        <div className="nav-mobile flex gap-10">
+      <nav ref={navRef} className="flex text-lg font-medium md-device">
+        <div className="nav-mobile flex gap-8">
           <Link
             onClick={showNavbar}
             exact

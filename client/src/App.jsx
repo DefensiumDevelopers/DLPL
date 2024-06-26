@@ -43,7 +43,7 @@ function App() {
       {!isLoading && (
         <motion.main
           key="content"
-          className="w-full flex flex-col bg-slate-300/20"
+          className="w-full h-min-screen flex flex-col bg-slate-300/20"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
@@ -59,8 +59,8 @@ function App() {
               <Route path="/about" element={<AboutUs />} />
               <Route path="/contact" element={<ContactUs />} />
             </Routes>
-            <Footer />
           </Router>
+          <Footer />
         </motion.main>
       )}
     </div>
