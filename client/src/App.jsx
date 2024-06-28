@@ -25,7 +25,7 @@ function App() {
   }, []);
 
   return (
-    <div className="relative w-full h-screen">
+    <>
       <AnimatePresence>
         {isLoading && (
           <motion.div
@@ -41,14 +41,15 @@ function App() {
         )}
       </AnimatePresence>
       {!isLoading && (
-        <motion.main
+        <motion.div
           key="content"
-          className="w-full h-min-screen flex flex-col bg-slate-300/20"
+          className=""
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
           s
         >
+          <div className="min-h-screen flex flex-col">
           <Router>
             <Navbar />
             <Routes>
@@ -61,9 +62,10 @@ function App() {
             </Routes>
           </Router>
           <Footer />
-        </motion.main>
+          </div>
+        </motion.div>
       )}
-    </div>
+    </>
   );
 }
 

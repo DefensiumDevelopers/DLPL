@@ -2,19 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-#particles canvas {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 0;
-}
-.heading-container {
-  position: relative;
-  z-index: 10;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -22,34 +9,11 @@
 }
 html,
 body {
-  height: 100%;
+  height: 100vh;
   width: 100%;
+  overflow-x: hidden;
 }
 
-
-/* .nav-logo {
-  position: relative;
-}
-
-.nav-logo span {
-  position: absolute;
-  top: 3px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  border-bottom: 8px solid #315dcf;
-  border-bottom: linear-gradient(to right, #315dcf 0%, #b700cf 100%);
-  border-radius: 1.75rem;
-  transform: scale(0) translateY(50px);
-  opacity: 0;
-}
-
-.nav-logo:hover span {
-  transform: scale(1) translateY(0);
-  transition: 0.3s ease;
-  opacity: 1;
-} */
 
 header {
   background: var(255, 255, 255, 0.5);
@@ -62,22 +26,8 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5px;
 }
 
-/* .nav-logo span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: linear-gradient(to right, #315ecfd7 0%, #b700cfd7 100%);
-  border-radius: 1.75rem;
-  transform: scale(0) translate(-100%, -100%);
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  opacity: 0;
-} */
 
 @keyframes rotateLogo {
   0% {
@@ -126,8 +76,8 @@ header .nav-btn {
 
 @media only screen and (max-width: 796px) {
   .nav-logo .logo {
-    width: 55px;
-    height: 55px;
+    width: 40px;
+    height: 40px;
   }
 
   header .nav-btn {
@@ -135,17 +85,19 @@ header .nav-btn {
     opacity: 1;
     display: block;
   }
+  
+  
   header nav {
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
+    right: 0;
+    width: 50%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
-    background: rgb(37 99 235 / var(--tw-bg-opacity));
+    background-color: rgb(29 78 216);
     transition: 0.7s ease;
     transform: translateX(100vh);
   }

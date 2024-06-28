@@ -15,16 +15,22 @@ const Navbar = () => {
     navRef.current.classList.toggle("responsive_nav");
   };
 
+
+  //Nav-links CSS
+
+  const nav_links = "h-10 sm:bg-white sm:rounded-xl sm:shadow-lg items-center justify-center flex font-bold duration-200";
+
+
   return (
-    <header className=" w-full h-[88px] bg-slate-100 top-0 flex justify-between items-center sm:px-16 px-8 py-2 mx-auto sticky left-0 right-0 backdrop-blur-[20px] z-20 ">
-      <Link to="/" className="nav-logo">
+    <header className=" w-full h-[80px] fixed top-0 flex justify-between items-center sm:px-16 px-8 pt-5 mx-auto  left-0 right-0">
+      <Link to="/" className="nav-logo bg-white px-5 py-2 rounded-lg">
         <img
           src={LogoImg}
           alt="logo"
-          className="w-[60px] h-[60px] object-cover rounded-3xl drop-shadow-lg logo duration-150"
+          className="w-[55px] h-[55px] object-cover rounded-3xl drop-shadow-lg logo duration-150"
         />
         <span></span>
-        <h2 className="font-bold text-4xl text-blue-700 tracking-tighter">
+        <h2 className="font-bold text-2xl sm:text-3xl text-blue-700 tracking-tighter">
           Defensium
         </h2>
       </Link>
@@ -41,7 +47,7 @@ const Navbar = () => {
             onClick={showNavbar}
             exact
             to="/"
-            className="h-10 items-center justify-center flex font-bold duration-200"
+            className={nav_links}
           >
             Home
           </Link>
@@ -49,7 +55,7 @@ const Navbar = () => {
             onClick={showNavbar}
             exact
             to="/services"
-            className="h-10 items-center justify-center flex font-bold duration-200"
+            className={nav_links}
           >
             Services
           </Link>
@@ -57,7 +63,7 @@ const Navbar = () => {
             onClick={showNavbar}
             exact
             to="/pricing"
-            className="h-10 items-center justify-center flex font-bold duration-200"
+            className={nav_links}
           >
             Pricing
           </Link>
@@ -65,21 +71,21 @@ const Navbar = () => {
             onClick={showNavbar}
             exact
             to="/blogs"
-            className="h-10 items-center justify-center flex font-bold duration-200"
+            className={nav_links}
           >
             Blogs
           </Link>
           <Link
             onClick={showNavbar}
             to="/about"
-            className="h-10 items-center justify-center flex font-bold duration-200"
+            className={nav_links}
           >
             About
           </Link>
           <Link
             onClick={showNavbar}
             to="/contact"
-            className="h-10 items-center justify-center flex font-bold duration-200"
+            className={nav_links}
           >
             Contact
           </Link>
