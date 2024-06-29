@@ -12,6 +12,7 @@ const Home = () => {
 
   return (
     <main className="flex flex-col justify-center items-center">
+     
       <DynamicText />
       <Services />
       <div className="w-full h-screen bg-yellow-300"></div>

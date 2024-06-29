@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <header className=" w-full h-[80px] fixed top-0 flex justify-between items-center sm:px-16 px-8 pt-5 mx-auto  left-0 right-0">
-      <Link to="/" className="nav-logo bg-white px-5 py-2 rounded-lg">
+      <Link to="/" className="nav-logo bg-white px-5 py-2 rounded-lg shadow-md">
         <img
           src={LogoImg}
           alt="logo"

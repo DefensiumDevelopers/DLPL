@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import DynamicBackground from "./DynamicBackground";
+
 
 const headings = ["Welcome to Defensium Labs", "Provide you security"];
 
@@ -10,7 +12,7 @@ const FlipLink = ({ children }) => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -50 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="text-white text-3xl sm:text-5xl absolute text-center"
+            className="text-white text-3xl sm:text-5xl font-bold absolute text-center"
         >
             {children}
         </motion.div>
@@ -38,7 +40,9 @@ const DynamicText = () => {
                     <FlipLink key={currentHeadingIndex}>
                         {headings[currentHeadingIndex]}
                     </FlipLink>
+                    <DynamicBackground />
                 </AnimatePresence>
+                
             </div>
         </motion.div>
     );
