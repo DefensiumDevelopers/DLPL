@@ -15,7 +15,7 @@ const Home = () => {
      
       <DynamicText />
       <Services />
-      <div className="w-full h-screen bg-yellow-300"></div>
+      <div className="w-full h-screen bg-rose-500"></div>
 
     </main>
   );
